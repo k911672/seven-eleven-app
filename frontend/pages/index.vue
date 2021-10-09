@@ -15,11 +15,13 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { ApiClient } from '../plugins/apiClient'
 
 export default {
   data() {
+    const apiClient = new ApiClient()
     return {
+      apiClient,
       products: [],
       fetched: false
     }
@@ -27,11 +29,8 @@ export default {
   methods: {
     async fetchAPI() {
       try {
-        const response = await axios.get(
-          'https://madefor.github.io/postal-code-api/api/v1/223/0062.json'
-        )
+        this.products = await this.apiClient.fetchAPI()
         this.fetched = true
-        this.products = response.data
       } catch (error) {
         console.error(error)
       }
