@@ -5,6 +5,10 @@
       APIを取得
     </v-btn>
     <template v-if="fetched">
+      <img
+        class="image"
+        src="https://img.7api-01.dp1.sej.co.jp/item-image/140070/AB52A01A9D707E08388655C41B613141.jpg"
+      />
       {{ products }}
     </template>
   </div>
@@ -35,3 +39,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.image {
+  width: 100px;
+  height: 100px;
+}
+</style>
