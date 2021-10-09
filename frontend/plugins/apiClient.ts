@@ -1,7 +1,8 @@
 import axios, { AxiosInstance } from "axios";
 import { Product } from "~/types/product";
+import { InterfaceApi } from "./interfaceApi";
 
-export class ApiClient {
+export class ApiClient implements InterfaceApi {
   client: AxiosInstance
 
   constructor() {
