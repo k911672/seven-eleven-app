@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-btn @click="fetchAPI()">APIを取得</v-btn>
+    <div></div>
+    <v-btn color="accent" @click="fetchAPI()">
+      APIを取得
+    </v-btn>
     <template v-if="fetched">
       {{ products }}
     </template>
