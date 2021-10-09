@@ -16,12 +16,11 @@
 
 <script>
 import { ApiClient } from '../plugins/apiClient'
+const apiClient = new ApiClient()
 
 export default {
   data() {
-    const apiClient = new ApiClient()
     return {
-      apiClient,
       products: [],
       fetched: false
     }
@@ -29,7 +28,7 @@ export default {
   methods: {
     async fetchAPI() {
       try {
-        this.products = await this.apiClient.fetchAPI()
+        this.products = await apiClient.fetchAPI()
         this.fetched = true
       } catch (error) {
         console.error(error)
