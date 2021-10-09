@@ -1,0 +1,10 @@
+{
+  // ファイル保存時に自動save
+  // "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  // おすすめ拡張機能のDL
+  "extensions.ignoreRecommendations": false,
+  // componentをauto importしないように
+  "typescript.suggest.autoImports": false,
+  "javascript.suggest.autoImports": false
+}
